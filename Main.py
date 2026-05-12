@@ -2,125 +2,72 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+import numpy as np
 
-# -------------------------------
-# Connect to MySQL
-# -------------------------------
+# =========================
+# PAGE CONFIG
+# =========================
+st.set_page_config(
+    page_title="Social Media Dashboard",
+    layout="wide"
+)
+
+# =========================
+# LOAD DATA
+# =========================
 @st.cache_data
 def load_data():
     df = pd.read_csv("social_media_addiction.csv")
     return df
 
 df = load_data()
-# -------------------------------
-# Load Full Dataset (Single Query)
-# -------------------------------
 
+# =========================
+# TITLE
+# =========================
+st.title("📊 Social Media Addiction Dashboard")
 
-# -------------------------------
-# Data Cleaning (IMPORTANT)
-# -------------------------------
-numeric_cols = [
-    "Age", "DailySocialMediaHours", "SleepHours",
-    "StressLevel", "AnxietyLevel",
-    "AddictionLevel", "AcademicPerformance",
-    "SocialInteractionLevel"
-]
+st.write("Dashboard deployed successfully 🚀")
 
-for col in numeric_cols:
-    df[col] = pd.to_numeric(df[col], errors="coerce")
+# =========================
+# METRICS
+# =========================
+col1, col2, col3 = st.columns(3)
 
-df.fillna(0, inplace=True)
+col1.metric("Total Users", len(df))
 
-# -------------------------------
-# 1. Platform Usage Analysis
-# -------------------------------
+col2.metric(
+    "Avg Usage Hours",
+    round(df["DailySocialMediaHours"].mean(), 2)
+)
+
+col3.metric(
+    "Avg Sleep Hours",
+    round(df["SleepHours"].mean(), 2)
+)
+
+# =========================
+# PLATFORM ANALYSIS
+# =========================
 platform = df["PlatformUsage"].value_counts().reset_index()
+
 platform.columns = ["Platform", "Count"]
 
-# Bar Chart
-plt.figure(figsize=(8,5))
-sns.barplot(data=platform, x="Platform", y="Count")
-plt.title("Platform Usage Distribution")
-plt.xlabel("Platform")
-plt.ylabel("Number of Users")
+fig = px.bar(
+    platform,
+    x="Platform",
+    y="Count",
+    color="Platform",
+    template="plotly_dark"
+)
 
-# Labels
-for i, val in enumerate(platform["Count"]):
-    plt.text(i, val, str(val), ha='center')
+st.plotly_chart(fig, use_container_width=True)
 
-plt.show()
+# =========================
+# DATA PREVIEW
+# =========================
+st.subheader("Dataset Preview")
 
-# Pie Chart
-plt.figure(figsize=(6,6))
-plt.pie(platform["Count"], labels=platform["Platform"], autopct='%1.1f%%')
-plt.title("Platform Usage Share")
-plt.show()
-
-
-# -------------------------------
-# 2. Correlation Heatmap
-# -------------------------------
-corr = df[
-    ["DailySocialMediaHours", "SleepHours",
-     "StressLevel", "AnxietyLevel", "AcademicPerformance"]
-].corr()
-
-plt.figure(figsize=(8,5))
-sns.heatmap(corr, annot=True, cmap="coolwarm")
-plt.title("Correlation Heatmap")
-plt.show()
-
-# -------------------------------
-# 3. Mental Health Analysis
-# -------------------------------
-mental = df.groupby("Gender")[["StressLevel", "AnxietyLevel"]].mean()
-
-mental.plot(kind="bar", stacked=True, figsize=(7,5))
-plt.title("Stress & Anxiety by Gender")
-plt.ylabel("Average Level")
-plt.show()
-
-# -------------------------------
-# 4. Radar Chart
-# -------------------------------
-radar_vals = df[
-    ["SocialInteractionLevel", "StressLevel",
-     "AnxietyLevel", "AddictionLevel"]
-].mean()
-
-categories = radar_vals.index.tolist()
-values = radar_vals.values
-
-angles = np.linspace(0, 2*np.pi, len(categories), endpoint=False).tolist()
-values = np.concatenate((values, [values[0]]))
-angles += angles[:1]
-
-plt.figure(figsize=(6,6))
-ax = plt.subplot(111, polar=True)
-ax.plot(angles, values)
-ax.fill(angles, values, alpha=0.2)
-ax.set_xticks(angles[:-1])
-ax.set_xticklabels(categories)
-plt.title("Average Mental Health Indicators")
-plt.show()
-
-# -------------------------------
-# 5. Depression Distribution
-# -------------------------------
-dep = df["DepressionLabel"].value_counts().reset_index()
-dep.columns = ["Label", "Count"]
-
-plt.figure(figsize=(6,4))
-sns.barplot(data=dep, x="Label", y="Count")
-plt.title("Depression Distribution")
-plt.show()
-
-# -------------------------------
-# 6. Dataset Preview
-# -------------------------------
-print("\n=== Dataset Preview ===")
-print(df.head())
+st.dataframe(df.head())
