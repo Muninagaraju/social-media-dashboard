@@ -97,17 +97,20 @@ Implemented advanced interactive charts using Plotly:
 # 📷 Screenshots
 
 ## Dashboard Overview
+![Dashboard Overview](https://raw.githubusercontent.com/Muninagaraju/social-media-dashboard/main/Dashboard.png)
 
-(Add Screenshot Here)
 
 ## Platform Analysis
 
-(Add Screenshot Here)
+![Platform Analysis](https://raw.githubusercontent.com/Muninagaraju/social-media-dashboard/main/platform.png)
 
 ## Mental Health Analysis
 
-(Add Screenshot Here)
+![Mental Health Analysis](https://raw.githubusercontent.com/Muninagaraju/social-media-dashboard/main/mental.png)
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Muninagaraju/social-media-dashboard/main/Dashboard.png" width="700"/>
+</p>
 ---
 
 # 🚀 Live Demo
