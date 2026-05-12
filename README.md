@@ -1,2 +1,184 @@
-# social-media-dashboard
-Interactive Social Media Addiction Analytics Dashboard using Streamlit, Plotly, Python, and SQL
+# 📊 Social Media Addiction Analytics Dashboard
+
+## 📄 Project Overview
+
+This project is an interactive Social Media Addiction Analytics Dashboard built using Python and Streamlit.
+The dashboard analyzes social media usage patterns, mental health indicators, sleep quality, stress levels, and academic performance using real-world datasets.
+
+The application provides interactive visualizations, KPI metrics, filtering systems, and downloadable reports to help users understand social media addiction trends and behavioral insights.
+
+---
+
+# 🛠️ Tech Stack
+
+* Python
+* Streamlit
+* Pandas
+* Plotly
+* NumPy
+* Seaborn
+* Matplotlib
+* Git & GitHub
+* Streamlit Community Cloud
+
+---
+
+# 🌟 Features
+
+## 1. Dashboard Overview
+
+### KPI Cards
+
+* Total Users
+* Average Social Media Usage Hours
+* Average Sleep Hours
+* Average Stress Level
+
+### Interactive Visualizations
+
+* Platform Usage Analysis
+* Donut Chart Distribution
+* Correlation Heatmap
+* Mental Health Analysis
+* Stress Distribution
+* Depression Distribution
+* Daily Social Media Usage Trends
+
+---
+
+## 2. Filters & User Interaction
+
+### Sidebar Filters
+
+* Filter by Gender
+* Filter by Social Media Platform
+
+### Download Feature
+
+* Download dataset as CSV
+
+---
+
+## 3. Mental Health Analytics
+
+The dashboard analyzes:
+
+* Stress Levels
+* Anxiety Levels
+* Depression Indicators
+* Sleep Quality
+* Social Interaction Levels
+
+---
+
+## 4. Data Visualization
+
+Implemented advanced interactive charts using Plotly:
+
+* Bar Charts
+* Pie / Donut Charts
+* Heatmaps
+* Histograms
+* Box Plots
+
+---
+
+# 🎨 UI / UX Features
+
+* Dark Mode Dashboard
+* Responsive Layout
+* Interactive Charts
+* Modern KPI Cards
+* Sidebar Navigation
+* Professional Analytics Interface
+
+---
+
+# 📷 Screenshots
+
+## Dashboard Overview
+
+(Add Screenshot Here)
+
+## Platform Analysis
+
+(Add Screenshot Here)
+
+## Mental Health Analysis
+
+(Add Screenshot Here)
+
+---
+
+# 🚀 Live Demo
+
+🔗 Live Dashboard:
+https://social-media-addiction-dashboard.streamlit.app/
+
+---
+
+# 💻 GitHub Repository
+
+🔗 GitHub Repository:
+https://github.com/Muninagaraju/social-media-dashboard
+
+---
+
+# 🚀 Setup Instructions
+
+## Clone Repository
+
+```bash
+git clone https://github.com/Muninagaraju/social-media-dashboard.git
+```
+
+---
+
+## Install Required Libraries
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Run Application
+
+```bash
+streamlit run Main.py
+```
+
+---
+
+# 📂 Project Structure
+
+```bash
+social-media-dashboard/
+│
+├── Main.py
+├── requirements.txt
+├── social_media_addiction.csv
+├── README.md
+└── screenshots/
+```
+
+---
+
+# 📈 Future Improvements
+
+* Machine Learning Prediction Model
+* User Authentication
+* Advanced Analytics
+* Real-Time Database Integration
+* Export Reports as PDF
+* AI-Based Insights
+
+---
+
+# 👨‍💻 Developed By
+
+## GUDIBOYINA MUNINAGARAJU
+
+📧 [gudiboyinamuninagaraju@gmail.com](mailto:gudiboyinamuninagaraju@gmail.com)
+🔗 LinkedIn: [www.linkedin.com/in/muninagaraju-gudiboyina](http://www.linkedin.com/in/muninagaraju-gudiboyina)
+🔗 GitHub: https://github.com/Muninagaraju
