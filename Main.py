@@ -6,15 +6,17 @@ import numpy as np
 # -------------------------------
 # Connect to MySQL
 # -------------------------------
-engine = sqlalchemy.create_engine(
-    "mysql+pymysql://root:Raju2003@localhost:3306/project1"
-)
+@st.cache_data
+def load_data():
+    df = pd.read_csv("social_media_addiction.csv")
+    return df
+
+df = load_data()
 
 # -------------------------------
 # Load Full Dataset (Single Query)
 # -------------------------------
-query = "SELECT * FROM social_media_addiction;"
-df = pd.read_sql(query, engine)
+
 
 # -------------------------------
 # Data Cleaning (IMPORTANT)
