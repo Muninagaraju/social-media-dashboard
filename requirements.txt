@@ -6,3 +6,5 @@ pymysql
 streamlit-option-menu
 streamlit-extras
 numpy
+seaborn
+matplotlib
