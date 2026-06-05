@@ -1,6 +1,6 @@
-# 📊 Social Media Addiction Analytics Dashboard
+# 📱 Social Media Addiction Analytics Dashboard
 
-## 📄 Project Overview
+## 💻 Project Overview
 
 This project is an interactive Social Media Addiction Analytics Dashboard built using Python and Streamlit.
 The dashboard analyzes social media usage patterns, mental health indicators, sleep quality, stress levels, and academic performance using real-world datasets.
@@ -23,7 +23,7 @@ The application provides interactive visualizations, KPI metrics, filtering syst
 
 ---
 
-# 🌟 Features
+# 🖥️ Features
 
 ## 1. Dashboard Overview
 
@@ -113,7 +113,7 @@ Implemented advanced interactive charts using Plotly:
 </p>
 ---
 
-# 🚀 Live Demo
+# 👨‍💻👨🏻‍💻👨‍💻 Live Demo
 
 🔗 Live Dashboard:
 https://social-media-addiction-dashboard.streamlit.app/
@@ -127,7 +127,7 @@ https://github.com/Muninagaraju/social-media-dashboard
 
 ---
 
-# 🚀 Setup Instructions
+# 👨🏻‍💻 Setup Instructions
 
 ## Clone Repository
 
