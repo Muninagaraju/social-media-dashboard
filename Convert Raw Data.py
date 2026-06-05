@@ -5,7 +5,6 @@ df = pd.read_csv(
     sep=r"\s+",   # regex: split on any whitespace
     header=None
 )
-
 # Assign column names
 df.columns = [
     "Age","Gender","DailySocialMediaHours","PlatformUsage","SleepHours","ScreenTimeBeforeSleep","AcademicPerformance","PhysicalActivity","SocialInteractionLevel","StressLevel","AnxietyLevel","AddictionLevel","DepressionLabel"
