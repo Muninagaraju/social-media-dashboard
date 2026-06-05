@@ -1,9 +1,13 @@
 # 📱 Social Media Addiction Analytics Dashboard
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Muninagaraju/social-media-dashboard/assets/thumbnail.png" width="1000"/>
+  <img src="https://raw.githubusercontent.com/Muninagaraju/social-media-dashboard/main/Dashboard.png" width="900"/>
 </p>
 
 <h1 align="center">📱 Social Media Addiction Analytics Dashboard</h1>
+
+<p align="center">
+  A Python & Streamlit-based analytics dashboard to analyze social media addiction patterns and mental health insights.
+</p>
 ## 💻 Project Overview
 
 This project is an interactive Social Media Addiction Analytics Dashboard built using Python and Streamlit.
