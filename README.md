@@ -1,6 +1,6 @@
 # 📱 Social Media Addiction Analytics Dashboard
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Muninagaraju/social-media-dashboard/main/Dashboard.png" width="900"/>
+  <img src="https://raw.githubusercontent.com/Muninagaraju/social-media-dashboard/main/assets/thumbnail.png" width="900"/>
 </p>
 
 <h1 align="center">📱 Social Media Addiction Analytics Dashboard</h1>
